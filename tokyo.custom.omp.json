@@ -1,0 +1,135 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#7eb8da",
+          "style": "plain",
+          "template": "┏ <#ffffff></> {{ .UserName }} ",
+          "type": "session"
+        },
+        {
+          "foreground": "#be9ddf",
+          "properties": {
+            "style": "dallas",
+            "threshold": 0
+          },
+          "style": "diamond",
+          "template": "<#ffffff></> {{ .FormattedMs }}s ",
+          "type": "executiontime"
+        },
+        {
+          "type": "python",
+          "style": "plain",
+          "powerline_symbol": "",
+          "foreground": "#906cff",
+          "template": " {{ .Full }} ",
+          "properties": {
+            "display_mode": "files"
+          }
+        },
+        {
+          "type": "node",
+          "style": "plain",
+          "foreground": "#6CA35E",
+          "properties": {
+            "fetch_package_manager": true,
+            "npm_icon": "",
+            "yarn_icon": ""
+          }
+        },
+        {
+          "type": "npm",
+          "style": "plain",
+          "foreground": "#218bd7",
+          "template": " {{ .Full }} "
+        },
+        {
+          "type": "project",
+          "style": "plain",
+          "powerline_symbol": "",
+          "foreground": "#ffeb3b",
+          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }} {{.Version}}{{ end }} {{ if .Name }}{{ .Name }}{{ end }}{{ end }} "
+        },
+        {
+          "foreground": "#ffa5d8",
+          "properties": {
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          },
+          "style": "plain",
+          "template": "[<#ffffff>{{ .UpstreamIcon }}</>{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <#ffffff></> {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} <#ffffff></> {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} <#ffffff></> {{ .StashCount }}{{ end }}]",
+          "type": "git"
+        },
+        {
+          "foreground": "#ffa5d8",
+          "style": "plain",
+          "template": "[]",
+          "type": "root"
+        },
+        {
+          "foreground": "#ffa5d8",
+          "style": "powerline",
+          "template": "[<#ffffff>ﲍ</> Error, check your command]",
+          "type": "exit"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "upgrade",
+          "style": "plain",
+          "foreground": "#111111",
+          "background": "#FFD664"
+        },
+        {
+          "foreground": "#7eb8da",
+          "properties": {
+            "time_format": "Monday at 3:04:05 PM"
+          },
+          "style": "diamond",
+          "template": "<#ffffff></> {{ .CurrentDate | date .Format }} ",
+          "type": "time"
+        }
+      ]
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#7eb8da",
+          "properties": {
+            "style": "full"
+          },
+          "style": "plain",
+          "template": "┖ <#98bfad>{{ .Path }}</>",
+          "type": "path"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#7eb8da",
+          "style": "plain",
+          "template": "└─$",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}
