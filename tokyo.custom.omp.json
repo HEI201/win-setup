@@ -7,7 +7,7 @@
         {
           "foreground": "#7eb8da",
           "style": "plain",
-          "template": "┏ <#ffffff></> {{ .UserName }} ",
+          "template": " <#ffffff></> {{ .UserName }} ",
           "type": "session"
         },
         {
@@ -110,7 +110,7 @@
             "style": "full"
           },
           "style": "plain",
-          "template": "┖ <#98bfad>{{ .Path }}</>",
+          "template": " <#98bfad>{{ .Path }}</>",
           "type": "path"
         }
       ],
@@ -123,7 +123,7 @@
         {
           "foreground": "#7eb8da",
           "style": "plain",
-          "template": "└─$",
+          "template": " $",
           "type": "text"
         }
       ],

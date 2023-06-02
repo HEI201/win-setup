@@ -50,7 +50,7 @@ function open {
 }
 
 function Set-Proxy { 
-    $proxy = "http://127.0.0.1:10811"
+    $proxy = "http://127.0.0.1:10809"
     $env:HTTP_PROXY = $proxy
     $env:HTTPS_PROXY = $proxy 
 

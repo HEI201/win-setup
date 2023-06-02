@@ -9,6 +9,7 @@ Install-Module -Name PSFzf -Scope CurrentUser
 # install oh-my-posh
 # install git 
 # install nerd font
+# set nerd font as the font face the terminal
 
 # install scoop
 # install sudo, jq, neovim, fzf using scoop
