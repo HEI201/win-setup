@@ -65,6 +65,32 @@ function Reset-Proxy {
     Write-Output $env:HTTPS_PROXY
 }
 
+function  monitoroff {
+    nircmd.exe monitor off
+}
+
+function  togglevolume {
+    nircmd.exe mutesysvolume 2    
+}
+
+function  silent {
+    nircmd.exe setvolume 0 0 0
+}
+
+function volumeup {
+    param (
+        [Parameter(Mandatory = $false)]
+        [int]$amount = 6000
+    )
+    nircmd.exe changesysvolume $amount
+}
+function volumedown {
+    param (
+        [Parameter(Mandatory = $false)]
+        [int]$amount = 6000
+    )
+    nircmd.exe changesysvolume -$amount
+}
 # Alias
 Set-Alias vi nvim
 Set-Alias ll ls
