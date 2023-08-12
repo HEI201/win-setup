@@ -80,7 +80,7 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#7eb8da",
+          "foreground": "#888888",
           "style": "plain",
           "template": " $",
           "type": "text"
