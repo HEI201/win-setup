@@ -35,11 +35,6 @@
         {
           "background": "#6CA35E",
           "foreground": "#ffffff",
-          "properties": {
-            "fetch_package_manager": true,
-            "npm_icon": "",
-            "yarn_icon": ""
-          },
           "style": "plain",
           "template": "  {{ .Full }} ",
           "type": "node"
@@ -56,28 +51,10 @@
           "type": "git"
         },
         {
-          "foreground": "#ffa5d8",
+          "foreground": "#ff0000",
           "style": "plain",
-          "template": "[]",
-          "type": "root"
-        },
-        {
-          "foreground": "#ffa5d8",
-          "style": "plain",
-          "template": "[<#ffffff>ﲍ</> Error, check your command]",
+          "template": "[Error, check your command]",
           "type": "exit"
-        }
-      ],
-      "type": "prompt"
-    },
-    {
-      "alignment": "left",
-      "segments": [
-        {
-          "background": "#FFD664",
-          "foreground": "#111111",
-          "style": "plain",
-          "type": "upgrade"
         },
         {
           "foreground": "#7eb8da",
@@ -121,16 +98,6 @@
       "type": "prompt"
     }
   ],
-  "error_line": {
-    "background": "transparent",
-    "foreground": "#ffffff",
-    "template": "<#eb6f92,#286983> </><#286983,transparent></> "
-  },
   "final_space": true,
-  "valid_line": {
-    "background": "transparent",
-    "foreground": "#ffffff",
-    "template": "<#e0def4,#286983> </><#286983,transparent></> "
-  },
   "version": 2
 }
