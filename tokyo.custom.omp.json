@@ -44,7 +44,7 @@
             "fetch_upstream_icon": true
           },
           "style": "plain",
-          "template": "[<#777777>{{ .UpstreamIcon }}</>{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <#ffffff></> {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} <#ffffff></> {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} <#ffffff></> {{ .StashCount }}{{ end }}] ",
+          "template": "[<#777777>{{ .UpstreamIcon }}</>{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <#ffff00></> {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} <#00ff00></> {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} <#ffffff></> {{ .StashCount }}{{ end }}] ",
           "type": "git"
         },
         {
@@ -69,7 +69,7 @@
             "style": "full"
           },
           "style": "plain",
-          "template": " <#666666>{{ .Path }}</>",
+          "template": "<#666666>{{ .Path }}</>",
           "type": "path"
         }
       ],
@@ -82,7 +82,7 @@
         {
           "foreground": "#888888",
           "style": "plain",
-          "template": " $",
+          "template": "$",
           "type": "text"
         }
       ],
