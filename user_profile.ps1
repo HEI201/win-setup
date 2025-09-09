@@ -49,14 +49,20 @@ function open {
     Invoke-Item $Path
 }
 
-function Set-Proxy { 
-    $proxy = "http://127.0.0.1:10809"
+function Set-Proxy {
+    param (
+        [string]$proxyProtocol = "http",
+        [string]$proxyHost = "127.0.0.1",
+        [int]$proxyPort = 10809
+    )
+    $proxy = "$proxyProtocol`://$proxyHost`:$proxyPort"
     $env:HTTP_PROXY = $proxy
-    $env:HTTPS_PROXY = $proxy 
+    $env:HTTPS_PROXY = $proxy
 
     Write-Output $env:HTTP_PROXY
     Write-Output $env:HTTPS_PROXY
 }
+
 function Reset-Proxy { 
     $env:HTTP_PROXY = "" 
     $env:HTTPS_PROXY = ""

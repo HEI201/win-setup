@@ -2,93 +2,107 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "<#aaaaaa>\uf508</> {{ .UserName }} ",
           "foreground": "#7eb8da",
-          "style": "plain",
-          "template": "<#aaaaaa></> {{ .UserName }} ",
-          "type": "session"
+          "type": "session",
+          "style": "plain"
         },
         {
-          "foreground": "#8844dd",
           "properties": {
             "always_enabled": true,
+            "cache_duration": "none",
             "style": "austin",
             "threshold": 500
           },
-          "style": "plain",
           "template": "{{ .FormattedMs }} ",
-          "type": "executiontime"
+          "foreground": "#8844dd",
+          "type": "executiontime",
+          "style": "plain"
         },
         {
-          "foreground": "#906cff",
           "properties": {
+            "cache_duration": "none",
             "display_mode": "files"
           },
-          "style": "plain",
-          "template": " {{ .Full }} ",
-          "type": "python"
+          "template": "\ue235 {{ .Full }} ",
+          "foreground": "#906cff",
+          "type": "python",
+          "style": "plain"
         },
         {
-          "foreground": "#6CA35E",
-          "style": "plain",
-          "template": " {{ .Full }} ",
-          "type": "node"
-        },
-        {
-          "foreground": "#ffa5d8",
           "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\ue718 {{ .Full }} ",
+          "foreground": "#6CA35E",
+          "type": "node",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
             "fetch_stash_count": true,
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
-          "style": "plain",
-          "template": "[<#777777>{{ .UpstreamIcon }}</>{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <#ffff00></> {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} <#00ff00></> {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} <#ffffff></> {{ .StashCount }}{{ end }}] ",
-          "type": "git"
+          "template": "[<#777777>{{ .UpstreamIcon }}</>{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} <#ffff00>\uf044</> {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} <#00ff00>\uf046</> {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} <#ffffff>\uf692</> {{ .StashCount }}{{ end }}] ",
+          "foreground": "#ffa5d8",
+          "type": "git",
+          "style": "plain"
         },
         {
-          "foreground": "#7eb8da",
           "properties": {
+            "cache_duration": "none",
             "time_format": "3:04:05 PM"
           },
-          "style": "plain",
           "template": "<#ffffff></>{{ .CurrentDate | date .Format }} ",
-          "type": "time"
+          "foreground": "#7eb8da",
+          "type": "time",
+          "style": "plain"
         }
-      ],
-      "type": "prompt"
+      ]
     },
     {
+      "type": "prompt",
       "alignment": "left",
-      "newline": true,
       "segments": [
         {
-          "foreground": "#7eb8da",
           "properties": {
+            "cache_duration": "none",
             "style": "full"
           },
-          "style": "plain",
           "template": "<#666666>{{ .Path }}</>",
-          "type": "path"
+          "foreground": "#7eb8da",
+          "type": "path",
+          "style": "plain"
         }
       ],
-      "type": "prompt"
+      "newline": true
     },
     {
+      "type": "prompt",
       "alignment": "left",
-      "newline": true,
       "segments": [
         {
-          "foreground": "#888888",
-          "style": "plain",
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": "$",
-          "type": "text"
+          "foreground": "#888888",
+          "type": "text",
+          "style": "plain"
         }
       ],
-      "type": "prompt"
+      "newline": true
     }
   ],
-  "final_space": true,
-  "version": 2
+  "version": 3,
+  "final_space": true
 }
