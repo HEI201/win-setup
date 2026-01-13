@@ -76,7 +76,7 @@ function  monitoroff {
 }
 
 function  togglevolume {
-    nircmd.exe mutesysvolume 2    
+    nircmd.exe mutesysvolume 2
 }
 
 function  silent {
