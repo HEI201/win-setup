@@ -1,12 +1,12 @@
 {
-  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
       "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "properties": {
+          "options": {
             "cache_duration": "none"
           },
           "template": "<#aaaaaa>\uf508</> {{ .UserName }} ",
@@ -15,9 +15,8 @@
           "style": "plain"
         },
         {
-          "properties": {
+          "options": {
             "always_enabled": true,
-            "cache_duration": "none",
             "style": "austin",
             "threshold": 500
           },
@@ -27,7 +26,7 @@
           "style": "plain"
         },
         {
-          "properties": {
+          "options": {
             "cache_duration": "none",
             "display_mode": "files"
           },
@@ -37,7 +36,7 @@
           "style": "plain"
         },
         {
-          "properties": {
+          "options": {
             "cache_duration": "none"
           },
           "template": "\ue718 {{ .Full }} ",
@@ -46,9 +45,7 @@
           "style": "plain"
         },
         {
-          "properties": {
-            "cache_duration": "none",
-            "fetch_stash_count": true,
+          "options": {
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
@@ -58,8 +55,7 @@
           "style": "plain"
         },
         {
-          "properties": {
-            "cache_duration": "none",
+          "options": {
             "time_format": "3:04:05 PM"
           },
           "template": "<#ffffff></>{{ .CurrentDate | date .Format }} ",
@@ -74,8 +70,7 @@
       "alignment": "left",
       "segments": [
         {
-          "properties": {
-            "cache_duration": "none",
+          "options": {
             "style": "full"
           },
           "template": "<#666666>{{ .Path }}</>",
@@ -91,7 +86,7 @@
       "alignment": "left",
       "segments": [
         {
-          "properties": {
+          "options": {
             "cache_duration": "none"
           },
           "template": "$",
@@ -103,6 +98,6 @@
       "newline": true
     }
   ],
-  "version": 3,
+  "version": 4,
   "final_space": true
 }
