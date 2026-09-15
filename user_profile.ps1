@@ -136,7 +136,7 @@ function Get-TabTitle {
     # common dir 的父目录名即仓库名（worktree / submodule 也适用）
     $repoName = Split-Path -Path (Split-Path -Path $commonDir -Parent) -Leaf
 
-    $title = "🎨 $repoName/$branch"
+    $title = "🎨 $repoName / $branch"
     if ($gitDir.TrimEnd('\', '/') -ne $commonDir.TrimEnd('\', '/')) {
         $title += " 🌿"
     }
