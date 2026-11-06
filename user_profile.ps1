@@ -120,7 +120,7 @@ function Get-TabTitle {
         $folder = Split-Path -Path $Path -Leaf
         if (-not $folder) { $folder = $Path.TrimEnd('\', '/') }
         elseif ($folder -match '^[A-Za-z]:[\\/]?$') { $folder = $folder.Substring(0, 2) }   # 驱动器根目录 -> C:
-        return "🧑‍💻 $folder"
+        return "$folder"
     }
 
     # --absolute-git-dir / --git-common-dir 依次输出两行
@@ -136,7 +136,7 @@ function Get-TabTitle {
     # common dir 的父目录名即仓库名（worktree / submodule 也适用）
     $repoName = Split-Path -Path (Split-Path -Path $commonDir -Parent) -Leaf
 
-    $title = "🎨 $repoName / $branch"
+    $title = "$repoName / $branch"
     if ($gitDir.TrimEnd('\', '/') -ne $commonDir.TrimEnd('\', '/')) {
         $title += " 🌿"
     }
